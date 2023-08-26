@@ -17,7 +17,7 @@ namespace WpfDrawingGroupDemo
         public InvalidateVisualTest()
         {
             InitializeComponent();
-            _pen.Freeze();
+            _pen.Freeze(); // It has a great impact on performance, thanks to DomeAlessi's reminder.
             Loaded += (_, _) => { _stopwatch.Start(); };
             CompositionTarget.Rendering += CompositionTarget_Rendering;
         }

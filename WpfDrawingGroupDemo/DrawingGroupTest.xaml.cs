@@ -17,7 +17,7 @@ namespace WpfDrawingGroupDemo
         public DrawingGroupTest()
         {
             InitializeComponent();
-            _pen.Freeze();
+            _pen.Freeze();// It has a great impact on performance, thanks to DomeAlessi's reminder.
             Loaded += (_, _) =>
             {
                 InvalidateVisual();
