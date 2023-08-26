@@ -9,5 +9,6 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
+    <!--<local:InvalidateVisualTest />-->
     <local:DrawingGroupTest />
 </Window>

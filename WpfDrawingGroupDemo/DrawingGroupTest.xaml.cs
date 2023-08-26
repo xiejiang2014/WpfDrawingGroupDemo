@@ -17,6 +17,7 @@ namespace WpfDrawingGroupDemo
         public DrawingGroupTest()
         {
             InitializeComponent();
+            _pen.Freeze();
             Loaded += (_, _) =>
             {
                 InvalidateVisual();
@@ -60,7 +61,6 @@ namespace WpfDrawingGroupDemo
         }
 
         private readonly Pen _pen = new(Brushes.Blue, 1);
-        private readonly Random _random = new();
 
         public void ReRender()
         {
@@ -68,8 +68,8 @@ namespace WpfDrawingGroupDemo
 
             for (int i = 0; i < 500; i++)
             {
-                var point1 = new Point(_random.Next(0, (int) ActualWidth), _random.Next(0, (int) ActualHeight));
-                var point2 = new Point(_random.Next(0, (int) ActualWidth), _random.Next(0, (int) ActualHeight));
+                var point1 = new Point(Random.Shared.Next(0, (int) ActualWidth), Random.Shared.Next(0, (int) ActualHeight));
+                var point2 = new Point(Random.Shared.Next(0, (int) ActualWidth), Random.Shared.Next(0, (int) ActualHeight));
 
                 drawingContext.DrawLine(_pen, point1, point2);
             }

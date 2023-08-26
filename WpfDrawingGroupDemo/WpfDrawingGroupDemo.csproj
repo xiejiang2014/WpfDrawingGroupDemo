@@ -2,8 +2,10 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <AssemblyVersion>1.0.23238.1344</AssemblyVersion>
+    <FileVersion>1.0.23238.1344</FileVersion>
   </PropertyGroup>
 
 </Project>
